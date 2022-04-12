@@ -74,7 +74,44 @@ E: The repository 'http://dist.carla.org/carla impish Release' does not have a R
 N: Updating from such a repository can't be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details.
 ```
-4/12/2022 3:34:49 PM: 
+4/12/2022 3:34:49 PM: sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla bionic main"
+
+4/12/2022 3:36:51 PM: maybe Pop!\_OS version is an issue.
+
+4/12/2022 3:38:47 PM:
 ```
-sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla bionic main"
+(carla-test) nsambhu@SAMBHU19:/data/data1/GitHub/carla-simulator4$ sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla bionic main"
+Repository: 'deb [arch=amd64] http://dist.carla.org/carla bionic main'
+Description:
+Archive for codename: bionic components: main
+More info: http://dist.carla.org/carla
+Adding repository.
+Press [ENTER] to continue or Ctrl-c to cancel.
+Adding deb entry to /etc/apt/sources.list.d/archive_uri-http_dist_carla_org_carla-impish.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/archive_uri-http_dist_carla_org_carla-impish.list
+Hit:1 http://us.archive.ubuntu.com/ubuntu impish InRelease
+Ign:2 http://dist.carla.org/carla impish InRelease                                                                       
+Get:3 http://us.archive.ubuntu.com/ubuntu impish-security InRelease [110 kB]                                             
+Get:4 http://dist.carla.org/carla bionic InRelease [2,338 B]                                                             
+Hit:5 https://linux.teamviewer.com/deb stable InRelease                                                                  
+Hit:6 https://dl.google.com/linux/chrome/deb stable InRelease                                                            
+Hit:7 https://download.sublimetext.com apt/stable/ InRelease                                                             
+Err:8 http://dist.carla.org/carla impish Release                                                                         
+  404  Not Found [IP: 34.227.255.250 80]
+Hit:9 http://apt.pop-os.org/proprietary impish InRelease                                                                 
+Get:10 http://dist.carla.org/carla bionic/main amd64 Packages [2,124 B]                                                  
+Get:11 http://us.archive.ubuntu.com/ubuntu impish-updates InRelease [115 kB]                                             
+Hit:12 http://apt.pop-os.org/release impish InRelease                                                   
+Get:13 http://us.archive.ubuntu.com/ubuntu impish-backports InRelease [101 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu impish-updates/universe Sources [40.0 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu impish-updates/main amd64 c-n-f Metadata [5,936 B]  
+Get:17 http://us.archive.ubuntu.com/ubuntu impish-updates/universe i386 Packages [117 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu impish-updates/universe amd64 Packages [188 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu impish-updates/universe Translation-en [58.0 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu impish-updates/universe amd64 c-n-f Metadata [5,384 B]
+Hit:14 https://packagecloud.io/slacktechnologies/slack/debian jessie InRelease           
+Reading package lists... Done
+E: The repository 'http://dist.carla.org/carla impish Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
 ```
