@@ -115,3 +115,37 @@ E: The repository 'http://dist.carla.org/carla impish Release' does not have a R
 N: Updating from such a repository can't be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details.
 ```
+4/12/2022 4:47:41 PM:
+```
+(base) nsambhu@SAMBHU19:/opt/carla-simulator/Import$ wget https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13.tar.gz; wget https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13_RSS.tar.gz
+--2022-04-12 15:17:01--  https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13.tar.gz
+Resolving carla-releases.s3.eu-west-3.amazonaws.com (carla-releases.s3.eu-west-3.amazonaws.com)... 52.95.155.0
+Connecting to carla-releases.s3.eu-west-3.amazonaws.com (carla-releases.s3.eu-west-3.amazonaws.com)|52.95.155.0|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6680164671 (6.2G) [application/x-tar]
+Saving to: ‘CARLA_0.9.13.tar.gz’
+
+CARLA_0.9.13.tar.gz 100%[===================>]   6.22G  4.00MB/s    in 22m 9s  
+
+2022-04-12 15:39:10 (4.80 MB/s) - ‘CARLA_0.9.13.tar.gz’ saved [6680164671/6680164671]
+
+--2022-04-12 15:39:10--  https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.13_RSS.tar.gz
+Resolving carla-releases.s3.eu-west-3.amazonaws.com (carla-releases.s3.eu-west-3.amazonaws.com)... 52.95.156.64
+Connecting to carla-releases.s3.eu-west-3.amazonaws.com (carla-releases.s3.eu-west-3.amazonaws.com)|52.95.156.64|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6853340526 (6.4G) [application/x-tar]
+Saving to: ‘CARLA_0.9.13_RSS.tar.gz’
+
+CARLA_0.9.13_RSS.ta 100%[===================>]   6.38G  4.99MB/s    in 18m 58s 
+
+2022-04-12 15:58:09 (5.74 MB/s) - ‘CARLA_0.9.13_RSS.tar.gz’ saved [6853340526/6853340526]
+
+```
+4/12/2022 5:21:55 PM: https://carla.readthedocs.io/en/latest/adv_rendering_options/
+```
+DISPLAY=:0.GPU ./CarlaUE4.sh -vulkan
+```
+4/12/2022 6:25:19 PM:
+```
+python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --reloadWorld
+```
