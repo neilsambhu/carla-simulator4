@@ -151,8 +151,12 @@ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_f
 ```
 4/12/2022 8:14 PM: downgrade OS from Pop!\_OS 21.10 to Ubuntu 20.04
 
-4/12/2021 11:07 PM: 
+4/12/2022 11:07 PM: 
 ```
 (carla-test) nsambhu@SAMBHU19:/opt/carla-simulator$ ./CarlaUE4.sh 
 /opt/carla-simulator/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping: error while loading shared libraries: libomp.so.5: cannot open shared object file: No such file or directory
+```
+4/13/2022 11:26 AM: https://github.com/carla-simulator/carla/issues/4498
+```
+sudo apt-get install libomp5
 ```
