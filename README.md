@@ -149,3 +149,4 @@ DISPLAY=:0.GPU ./CarlaUE4.sh -vulkan
 ```
 python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --reloadWorld
 ```
+4/12/2022 8:14 PM: downgrade OS
