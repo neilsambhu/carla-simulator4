@@ -161,3 +161,32 @@ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_f
 sudo apt-get install libomp5
 ```
 4/13/2022 11:38 AM: added SSH key
+
+4/13/2022 11:52 AM:
+```
+(carla-test) nsambhu@SAMBHU19:~/data1/GitHub/carla-simulator4/scenario_runner-0.9.13$ python scenario_runner.py --scenario FollowLeadingVehicle_1 --reloadWorld
+scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.12'):
+Preparing scenario: FollowLeadingVehicle_1
+ScenarioManager: Running scenario FollowVehicle
+Not all scenario tests were successful
+Please run with --output for further information
+Destroying ego vehicle 253
+ERROR: failed to destroy actor 253 : unable to destroy actor: not found 
+No more scenarios .... Exiting
+```
+4/13/2022 11:57 AM:
+```
+(carla-test) nsambhu@SAMBHU19:~/data1/GitHub/carla-simulator4/scenario_runner-0.9.13$ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --reloadWorld
+scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.12'):
+Preparing scenario: FollowLeadingVehicle_1
+Traceback (most recent call last):
+  File "scenario_runner.py", line 408, in _load_and_run_scenario
+    self.client.start_recorder(recorder_name, True)
+RuntimeError: time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+terminate called after throwing an instance of 'carla::client::TimeoutException'
+  what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+Aborted (core dumped)
+```
