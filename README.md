@@ -278,3 +278,4 @@ terminate called after throwing an instance of 'carla::client::TimeoutException'
   what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
 Aborted (core dumped)
 ```
+4/13/2022 12:35 PM: TODO:build CARLA from source.
