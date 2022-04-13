@@ -230,3 +230,21 @@ terminate called after throwing an instance of 'carla::client::TimeoutException'
   what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
 Aborted (core dumped)
 ```
+4/13/2022 12:18 PM: try specifying xml
+```
+(carla-test) nsambhu@SAMBHU19:~/data1/GitHub/carla-simulator4/scenario_runner-0.9.13$ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --configFile srunner/examples/FollowLeadingVehicle.xml --reloadWorld
+scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.12'):
+Preparing scenario: FollowLeadingVehicle_1
+Neil got here 1
+current directory /data/data1/GitHub/carla-simulator4/scenario_runner-0.9.13
+recorder_name /data/data1/GitHub/carla-simulator4/scenario_runner-0.9.13/recording_files/FollowLeadingVehicle_1.log
+Traceback (most recent call last):
+  File "scenario_runner.py", line 415, in _load_and_run_scenario
+    self.client.start_recorder(recorder_name, True)
+RuntimeError: time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+terminate called after throwing an instance of 'carla::client::TimeoutException'
+  what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+Aborted (core dumped)
+```
