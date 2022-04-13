@@ -212,7 +212,7 @@ terminate called after throwing an instance of 'carla::client::TimeoutException'
   what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
 Aborted (core dumped)
 ```
-4/13/2022 12:12 PM:
+4/13/2022 12:12 PM: https://github.com/carla-simulator/scenario_runner/issues/730#issuecomment-839777716
 ```
 (carla-test) nsambhu@SAMBHU19:~/data1/GitHub/carla-simulator4/scenario_runner-0.9.13$ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --reloadWorld
 scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
