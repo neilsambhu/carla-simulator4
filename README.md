@@ -248,3 +248,33 @@ terminate called after throwing an instance of 'carla::client::TimeoutException'
   what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
 Aborted (core dumped)
 ```
+4/13/2022 12:22 PM: add details to https://github.com/carla-simulator/carla/discussions/4143#discussioncomment-2549286
+
+I reinstalled the OS of my machine, downgrading from Pop!\_OS 21.10 to Ubuntu 20.04: https://github.com/neilsambhu/carla-simulator4. This time I installed Carla from Debian instead of from souce. I still get an error:
+```
+(carla-test) nsambhu@SAMBHU19:~/data1/GitHub/carla-simulator4/scenario_runner-0.9.13$ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --reloadWorld
+scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.12'):
+Preparing scenario: FollowLeadingVehicle_1
+Traceback (most recent call last):
+  File "scenario_runner.py", line 408, in _load_and_run_scenario
+    self.client.start_recorder(recorder_name, True)
+RuntimeError: time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+terminate called after throwing an instance of 'carla::client::TimeoutException'
+  what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+Aborted (core dumped)
+```
+4/13/2022 12:29 PM: try different scenario (FollowLeadingVehicleWithObstacle_1)
+```
+(carla-test) nsambhu@SAMBHU19:~/data1/GitHub/carla-simulator4/scenario_runner-0.9.13$ python scenario_runner.py --scenario FollowLeadingVehicleWithObstacle_1 --record recording_files --reloadWorld
+scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.12'):
+Preparing scenario: FollowLeadingVehicleWithObstacle_1
+Neil got here 1
+current directory /data/data1/GitHub/carla-simulator4/scenario_runner-0.9.13
+recorder_name /data/data1/GitHub/carla-simulator4/scenario_runner-0.9.13/recording_files/FollowLeadingVehicleWithObstacle_1.log
+terminate called after throwing an instance of 'carla::client::TimeoutException'
+  what():  time-out of 10000ms while waiting for the simulator, make sure the simulator is ready and connected to 127.0.0.1:2000
+Aborted (core dumped)
+```
