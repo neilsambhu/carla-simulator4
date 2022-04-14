@@ -279,3 +279,101 @@ terminate called after throwing an instance of 'carla::client::TimeoutException'
 Aborted (core dumped)
 ```
 4/13/2022 12:35 PM: TODO:build CARLA from source.
+
+4/14/2022 2:47:43 PM: I did not build CARLA from souce. Downgrade to Ubuntu 18.04 succeeded. 
+
+4/14/2022 2:49:51 PM: pull the newest GitHub from scenario_runner github.
+
+4/14/2022 2:51:20 PM: install requirements.txt from scenario_runner.
+
+4/14/2022 2:52:18 PM: install requirements.txt from opt/carla-simulator/PythonAPI/examples.
+
+4/14/2022 3:56:35 PM: scenario FollowLeadingVehicle_1 successful
+```
+(carla-test) nsambhu@SAMBHU19:/opt/carla-simulator$ ./CarlaUE4.sh 
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+```
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record records --reloadWorld
+scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.12'):
+Preparing scenario: FollowLeadingVehicle_1
+ScenarioManager: Running scenario FollowVehicle
+All scenario tests were passed successfully!
+Destroying ego vehicle 373
+ERROR: failed to destroy actor 373 : unable to destroy actor: not found 
+No more scenarios .... Exiting
+```
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python manual_control.py 
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.13)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+INFO: listening to server 127.0.0.1:2000
+
+Welcome to CARLA manual control.
+
+Use ARROWS or WASD keys for control.
+
+    W            : throttle
+    S            : brake
+    A/D          : steer left/right
+    Q            : toggle reverse
+    Space        : hand-brake
+    P            : toggle autopilot
+    M            : toggle manual transmission
+    ,/.          : gear up/down
+
+    L            : toggle next light type
+    SHIFT + L    : toggle high beam
+    Z/X          : toggle right/left blinker
+    I            : toggle interior light
+
+    TAB          : change camera position
+
+    R            : toggle recording images to disk
+
+    CTRL + R     : toggle recording of simulation (replacing any previous)
+    CTRL + P     : start replaying last recorded simulation
+    CTRL + +     : increments the start time of the replay by 1 second (+SHIFT = 10 seconds)
+    CTRL + -     : decrements the start time of the replay by 1 second (+SHIFT = 10 seconds)
+
+    F1           : toggle HUD
+    H/?          : toggle help
+    ESC          : quit
+
+Waiting for the ego vehicle...
+Ego vehicle found
+WARNING: attempting to destroy an actor that is already dead: Actor 373 (vehicle.lincoln.mkz_2017) 
+```
+```
+(base) nsambhu@SAMBHU19:~/github/scenario_runner/records$ lsl
+total 20M
+-rw-rw-r-- 1 nsambhu nsambhu 590 Apr 14 15:56 FollowLeadingVehicle_1.json
+-rw-rw-r-- 1 nsambhu nsambhu 20M Apr 14 15:56 FollowLeadingVehicle_1.log
+```
+```
+(base) nsambhu@SAMBHU19:~/github/scenario_runner/records$ cat FollowLeadingVehicle_1.json 
+{
+    "CollisionTest": {
+        "children": [],
+        "feedback_message": "",
+        "blackbox_level": 4,
+        "_terminate_on_failure": false,
+        "test_status": "SUCCESS",
+        "expected_value_success": 0,
+        "expected_value_acceptable": null,
+        "actual_value": 0,
+        "optional": false,
+        "list_traffic_events": [],
+        "_collision_sensor": null,
+        "other_actor": null,
+        "other_actor_type": null,
+        "registered_collisions": [],
+        "last_id": null,
+        "collision_time": null,
+        "terminate_on_failure": false
+    }
+}
+```
+FollowLeadingVehicle_1.log is a binary file
