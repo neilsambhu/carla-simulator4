@@ -378,7 +378,7 @@ total 20M
 ```
 FollowLeadingVehicle_1.log is a binary file
 
-4/15/2022 11:20:21 AM:
+4/15/2022 11:20:21 AM: https://carla-scenariorunner.readthedocs.io/en/latest/metrics_module/
 ```
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json 
 usage: metrics_manager.py [-h] [--host HOST] [--port PORT] --log LOG --metric
@@ -445,3 +445,17 @@ Output image stored at /home/nsambhu/github/scenario_runner/srunner/metrics/data
     ]
 }
 ```
+4/15/2022 1:23:55 PM: query the recording: metrics_parser.py, metrics_log.py, metrics_parser.py
+
+4/15/2022 1:27:17 PM: switch to using scenario_runner in carla-simulator4
+
+4/15/2022 1:33:28 PM: re-run distance_between_vehicles.py
+```
+(carla-test) nsambhu@SAMBHU19:~/github/carla-simulator4/scenario_runner-0.9.13$ python metrics_manager.py --log recording_files/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/distance_between_vehicles.py
+ERROR: The specified log file does not exist
+```
+4/15/2022 1:42:48 PM: re-run \*.log and \*.json
+```
+python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --reloadWorld
+```
+manual_control.py failed: I changed SCENARIO_RUNNER_ROOT in .bashrc file
