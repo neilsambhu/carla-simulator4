@@ -416,8 +416,6 @@ No child class of BasicMetric was found ... Exiting
 ```
 ```
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ cat srunner/metrics/data/DistanceToLaneCenter_results.json > out.txt
-```
-```
 {
     "frames": [
         1,
