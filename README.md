@@ -459,3 +459,7 @@ ERROR: The specified log file does not exist
 python scenario_runner.py --scenario FollowLeadingVehicle_1 --record recording_files --reloadWorld
 ```
 manual_control.py failed: I changed SCENARIO_RUNNER_ROOT in .bashrc file
+
+4/15/2022 3:02 PM: changed SCENARIO_RUNNER_ROOT back to scenario_runner in github directory
+
+4/15/2022 3:13 PM: TODO: find out how to push to scenario_runner custom Neil branch
