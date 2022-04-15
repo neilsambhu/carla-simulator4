@@ -385,12 +385,12 @@ usage: metrics_manager.py [-h] [--host HOST] [--port PORT] --log LOG --metric
                           METRIC [--criteria CRITERIA]
 metrics_manager.py: error: the following arguments are required: --metric
 ```
-4/15/2022 11:45:57 AM:
+4/15/2022 11:45:57 AM: basic_metric.py
 ```
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/basic_metric.py 
 No child class of BasicMetric was found ... Exiting
 ```
-4/15/2022 11:57:01 AM:
+4/15/2022 11:57:01 AM: criteria_filter.py
 ```
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/criteria_filter.py 
 ```
@@ -404,13 +404,13 @@ No child class of BasicMetric was found ... Exiting
     }
 }
 ```
-4/15/2022 12:00:10 PM:
+4/15/2022 12:00:10 PM: distance_between_vehicles.py
 ```
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/distance_between_vehicles.py 
 ```
-/home/nsambhu/github/scenario_runner/srunner/metrics/data/DistanceBetweenVehicles.png
+Output image stored at /home/nsambhu/github/scenario_runner/srunner/metrics/data/DistanceBetweenVehicles.png
 
-4/15/2022 1:05:24 PM:
+4/15/2022 1:05:24 PM: distance_to_lane_center.py
 ```
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/distance_to_lane_center.py 
 ```
