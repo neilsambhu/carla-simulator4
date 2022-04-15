@@ -409,3 +409,41 @@ No child class of BasicMetric was found ... Exiting
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/distance_between_vehicles.py 
 ```
 /home/nsambhu/github/scenario_runner/srunner/metrics/data/DistanceBetweenVehicles.png
+
+4/15/2022 1:05:24 PM:
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/distance_to_lane_center.py 
+```
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ cat srunner/metrics/data/DistanceToLaneCenter_results.json > out.txt
+```
+```
+{
+    "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        ...
+        5219,
+        5220,
+        5221,
+        5222
+    ],
+    "distance": [
+        -0.41738895767617235,
+        -0.41738895767617235,
+        -0.41738895767617235,
+        -0.41738895767617235,
+        -0.41738895767617235,
+        -0.41738895767617235,
+        ...
+        3.051757571406056e-05,
+        3.051757571406056e-05,
+        3.051757571406056e-05,
+        3.051757571406056e-05
+    ]
+}
+```
