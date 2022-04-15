@@ -390,3 +390,22 @@ metrics_manager.py: error: the following arguments are required: --metric
 (carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/basic_metric.py 
 No child class of BasicMetric was found ... Exiting
 ```
+4/15/2022 11:57:01 AM:
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/criteria_filter.py 
+```
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ cat srunner/metrics/data/CriteriaFilter_results.json 
+{
+    "CollisionTest": {
+        "test_status": "SUCCESS",
+        "actual_value": 0,
+        "success_value": 0
+    }
+}
+```
+4/15/2022 12:00:10 PM:
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/distance_between_vehicles.py 
+```
+/home/nsambhu/github/scenario_runner/srunner/metrics/data/DistanceBetweenVehicles.png
