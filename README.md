@@ -377,3 +377,16 @@ total 20M
 }
 ```
 FollowLeadingVehicle_1.log is a binary file
+
+4/15/2022 11:20:21 AM:
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json 
+usage: metrics_manager.py [-h] [--host HOST] [--port PORT] --log LOG --metric
+                          METRIC [--criteria CRITERIA]
+metrics_manager.py: error: the following arguments are required: --metric
+```
+4/15/2022 11:45:57 AM:
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python metrics_manager.py --log records/FollowLeadingVehicle_1.log --criteria records/FollowLeadingVehicle_1.json --metric srunner/metrics/examples/basic_metric.py 
+No child class of BasicMetric was found ... Exiting
+```
