@@ -476,4 +476,4 @@ Destroying ego vehicle 373
 ERROR: failed to destroy actor 373 : unable to destroy actor: not found 
 No more scenarios .... Exiting
 ```
-4/16/2022 9:23:44 PM: new github with the ability to update from CARLA scenario_runnery (notes): https://github.com/neilsambhu/scenario_runner/blob/NeilBranch0/TIMELINE.md
+4/16/2022 9:23:44 PM: new github with the ability to update from CARLA scenario_runnery (notes): https://github.com/neilsambhu/scenario_runner/tree/NeilBranch0/timeline
