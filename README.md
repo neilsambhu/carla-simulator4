@@ -463,3 +463,17 @@ manual_control.py failed: I changed SCENARIO_RUNNER_ROOT in .bashrc file
 4/15/2022 3:02 PM: changed SCENARIO_RUNNER_ROOT back to scenario_runner in github directory
 
 4/15/2022 3:13 PM: TODO: find out how to push to scenario_runner custom Neil branch
+
+4/15/2022 3:39 PM: 
+```
+(carla-test) nsambhu@SAMBHU19:~/github/scenario_runner$ python scenario_runner.py --scenario FollowLeadingVehicle_1 --record records --reloadWorld
+scenario_runner.py:94: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.12'):
+Preparing scenario: FollowLeadingVehicle_1
+ScenarioManager: Running scenario FollowVehicle
+All scenario tests were passed successfully!
+Destroying ego vehicle 373
+ERROR: failed to destroy actor 373 : unable to destroy actor: not found 
+No more scenarios .... Exiting
+```
+4/16/2022 9:23:44 PM: new github with the ability to update from CARLA scenario_runnery (notes): https://github.com/neilsambhu/scenario_runner/blob/NeilBranch0/TIMELINE.md
